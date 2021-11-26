@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-1-g15f4949  Build Version: 1.6.7594.29634
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="blacksail_description">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="2.8139755276237E-08 0.144789959188267 -0.0127097258478716"
+        rpy="0 0 0" />
+      <mass
+        value="50.9279780998108" />
+      <inertia
+        ixx="2.7911751248795"
+        ixy="5.19369002268616E-06"
+        ixz="3.20055016815703E-05"
+        iyy="3.53852818407439"
+        iyz="0.0466571582315679"
+        izz="0.989293022946694" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://blacksail_description/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://blacksail_description/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="left_cam">
+    <inertial>
+      <origin
+        xyz="-5.55111512312578E-17 0.0165 -5.55111512312578E-17"
+        rpy="0 0 0" />
+      <mass
+        value="0.182862853798014" />
+      <inertia
+        ixx="3.25492565937973E-05"
+        ixy="-3.33730981218194E-19"
+        ixz="-4.78920682195611E-21"
+        iyy="0.000448067177719045"
+        iyz="7.23086566158669E-22"
+        izz="0.000448707529089587" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://blacksail_description/meshes/left_cam.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://blacksail_description/meshes/left_cam.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="hull_left_cam"
+    type="fixed">
+    <origin
+      xyz="-0.0757772228311384 0.392999999994536 0.398600696990968"
+      rpy="-3.14159265358979 0 -2.61799387799149" />
+    <parent
+      link="base_link" />
+    <child
+      link="left_cam" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="right_cam">
+    <inertial>
+      <origin
+        xyz="5.55111512312578E-17 0.0164999999999999 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.182862853798014" />
+      <inertia
+        ixx="3.25492565937971E-05"
+        ixy="1.64324391767334E-19"
+        ixz="3.65330026310157E-21"
+        iyy="0.000448067177719044"
+        iyz="-1.51134911612092E-21"
+        izz="0.000448707529089586" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://blacksail_description/meshes/right_cam.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://blacksail_description/meshes/right_cam.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="hull_right_cam"
+    type="fixed">
+    <origin
+      xyz="0.0757772228311382 0.392999999994536 0.398600696990968"
+      rpy="0 0 -0.5235987755983" />
+    <parent
+      link="base_link" />
+    <child
+      link="right_cam" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="left_eng">
+    <inertial>
+      <origin
+        xyz="-6.82063415196055E-05 0.000560330151309546 0.00397598353706508"
+        rpy="0 0 0" />
+      <mass
+        value="0.19484238791606" />
+      <inertia
+        ixx="0.00013116757946852"
+        ixy="8.25302298097931E-08"
+        ixz="-1.49413806603009E-07"
+        iyy="0.000127130799863772"
+        iyz="-1.46121941515838E-07"
+        izz="0.000181252770882204" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://blacksail_description/meshes/left_eng.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://blacksail_description/meshes/left_eng.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="hull_left_eng"
+    type="revolute">
+    <origin
+      xyz="-0.25827 -0.37496 -0.1222"
+      rpy="1.5708 0 0.33498" />
+    <parent
+      link="base_link" />
+    <child
+      link="left_eng" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-1.57"
+      upper="1.57"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="right_eng">
+    <inertial>
+      <origin
+        xyz="-6.81701581830008E-05 0.00055997793931932 0.00397716963707073"
+        rpy="0 0 0" />
+      <mass
+        value="0.194831379335681" />
+      <inertia
+        ixx="0.00013116295290192"
+        ixy="8.27753416032872E-08"
+        ixz="-1.49686506620084E-07"
+        iyy="0.000127131091026345"
+        iyz="-1.46963833733725E-07"
+        izz="0.000181251334069354" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://blacksail_description/meshes/right_eng.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://blacksail_description/meshes/right_eng.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="hull_right_eng"
+    type="revolute">
+    <origin
+      xyz="0.25827 -0.37496 -0.1222"
+      rpy="1.5708 0 -0.33498" />
+    <parent
+      link="base_link" />
+    <child
+      link="right_eng" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-1.57"
+      upper="1.57"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="lidar">
+    <inertial>
+      <origin
+        xyz="-5.54618992302504E-17 0.0332155209723482 5.55111512312578E-17"
+        rpy="0 0 0" />
+      <mass
+        value="0.537435618051217" />
+      <inertia
+        ixx="0.000612329601452891"
+        ixy="-9.21239595365334E-21"
+        ixz="-1.24077091882954E-20"
+        iyy="0.000696774634775495"
+        iyz="-2.86720185824769E-22"
+        izz="0.000652989597944181" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://blacksail_description/meshes/lidar.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://blacksail_description/meshes/lidar.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="hull_lidar"
+    type="fixed">
+    <origin
+      xyz="0 0.390999999994537 0.427100696990968"
+      rpy="1.5707963267949 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="lidar" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+</robot>
