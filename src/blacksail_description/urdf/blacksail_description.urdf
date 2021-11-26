@@ -86,7 +86,7 @@
   </link>
   <joint
     name="hull_left_cam"
-    type="fixed">
+    type="revolute">
     <origin
       xyz="-0.0757772228311384 0.392999999994536 0.398600696990968"
       rpy="-3.14159265358979 0 -2.61799387799149" />
@@ -95,7 +95,12 @@
     <child
       link="left_cam" />
     <axis
-      xyz="0 0 0" />
+      xyz="0 1 0" />
+    <limit
+      lower="-1.57"
+      upper="1.57"
+      effort="0"
+      velocity="0" />
   </joint>
   <link
     name="right_cam">
