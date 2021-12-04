@@ -2,14 +2,15 @@
 <!-- World containing sydneyregatta model and some course challenges -->
 <sdf version="1.6" xmlns:xacro="http://ros.org/wiki/xacro">
   <world name="robotx_example_course">
-    <xacro:include filename="$(find vrx_gazebo)/worlds/sydneyregatta.xacro" />
+    <!-- <xacro:include filename="$(find usv_gazebo_plugins/)/worlds/sydneyregatta.world" /> -->
+    <xacro:include filename="$(find usv_gazebo_plugins)/worlds/sydneyregatta.xacro" />
     <xacro:sydneyregatta />
     <!--Waves-->
-    <xacro:include filename="$(find wave_gazebo)/world_models/ocean_waves/model.xacro"/>
+    <xacro:include filename="$(find usv_gazebo_plugins)/worlds/world_models/ocean_waves/model.xacro"/>
     <xacro:ocean_waves scale="2.5"/>
 
     <!--Wind-->
-    <xacro:include filename="$(find vrx_gazebo)/worlds/xacros/usv_wind_plugin.xacro"/>
+    <xacro:include filename="$(find usv_gazebo_plugins)/worlds/xacros/usv_wind_plugin.xacro"/>
     <xacro:usv_wind_gazebo>
       <wind_objs>
         <wind_obj>
